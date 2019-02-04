@@ -1,0 +1,697 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="1/27/2019 5:28:12 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-A6IR04A"
+  DTS:CreatorName="DESKTOP-A6IR04A\luana"
+  DTS:DTSID="{D0782CA8-477D-4267-9993-6A79A06BF5C5}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="13.0.4001.0"
+  DTS:LocaleID="1046"
+  DTS:ObjectName="18_Foreach_Arquivos"
+  DTS:PackageType="5"
+  DTS:VersionBuild="3"
+  DTS:VersionGUID="{31D6DB9B-6D87-464F-840F-DF40CC22E8A6}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-A6IR04A.loja.sa]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{1099C260-3CB7-40B7-9182-FF672B3A60BE}"
+      DTS:ObjectName="DESKTOP-A6IR04A.loja.sa">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=DESKTOP-A6IR04A;User ID=sa;Initial Catalog=loja;Provider=SQLNCLI11.1;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAdSxSU87rPUyZt1moY0illgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADWPXtyUlQvnLXvb9JaOADFRnJhIcP0bgiIJdCSPjyZ8wAAAAAOgAAAAAIAACAAAABRoqlMmylQX9MPHhbfbh57TDIP4kjElIYCsQncUdsJRhAAAACbJR+LGFVJcVmVIXI924JCQAAAAJVviMNAeKitzuP5unyxn5pnTm11krybXOObmSkknuGl61eQlmTH9yokPYilwGCyceLpgvXLxfKSdldTbwFHFek</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager_RD_AQUIVO_CLIENTES]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{A99665CE-7148-4226-8B7B-852BDF60442F}"
+      DTS:ObjectName="Flat File Connection Manager_RD_AQUIVO_CLIENTES">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::INDICE]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1046"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 0"
+              DTS:DTSID="{1B35D21C-8506-4AD2-88F9-C45DAC8643F3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 1"
+              DTS:DTSID="{30F45953-5AA1-4974-BD8F-D5DF3FA0FCFA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 2"
+              DTS:DTSID="{9B41ADC9-B658-45E6-BFEB-024F5C290458}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 3"
+              DTS:DTSID="{C957007E-3F3E-42C5-B40C-133A2D9FD7E0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 4"
+              DTS:DTSID="{6C90D947-A00B-4725-94EA-B985FDA6B059}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{6716C493-DD15-43DB-94B7-E0FF8B05422A}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="INDICE">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Carrega Arquivos"
+      DTS:CreationName="STOCK:FOREACHLOOP"
+      DTS:Description="Foreach Loop Container"
+      DTS:DTSID="{C523B9F3-AAD7-4645-A30A-790117DF1976}"
+      DTS:ExecutableType="STOCK:FOREACHLOOP"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Carrega Arquivos">
+      <DTS:ForEachEnumerator
+        DTS:CreationName="Microsoft.ForEachFileEnumerator"
+        DTS:DTSID="{D61FD69F-8A2C-461A-90C9-B40C4C2E9C04}"
+        DTS:ObjectName="{D61FD69F-8A2C-461A-90C9-B40C4C2E9C04}">
+        <DTS:ObjectData>
+          <ForEachFileEnumeratorProperties>
+            <FEFEProperty
+              Folder="D:\udemy\integrationServices\2019\Dados\CLIENTES" />
+            <FEFEProperty
+              FileSpec="*.TXT" />
+            <FEFEProperty
+              FileNameRetrievalType="0" />
+            <FEFEProperty
+              Recurse="0" />
+          </ForEachFileEnumeratorProperties>
+        </DTS:ObjectData>
+      </DTS:ForEachEnumerator>
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Carrega Arquivos\Data Flow Task"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{D32ED9F2-7338-44F9-A34F-3F5FEF2D0C91}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Data Flow Task"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Carrega Arquivos\Data Flow Task\Flat File Source_Arquivo_Clientes"
+                  componentClassID="Microsoft.FlatFileSource"
+                  contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Source"
+                  localeId="1046"
+                  name="Flat File Source_Arquivo_Clientes"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether zero-length columns are treated as null."
+                      name="RetainNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Carrega Arquivos\Data Flow Task\Flat File Source_Arquivo_Clientes.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager_RD_AQUIVO_CLIENTES]"
+                      connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager_RD_AQUIVO_CLIENTES]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Carrega Arquivos\Data Flow Task\Flat File Source_Arquivo_Clientes.Outputs[Flat File Source Output]"
+                      name="Flat File Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Carrega Arquivos\Data Flow Task\Flat File Source_Arquivo_Clientes.Outputs[Flat File Source Output].Columns[Column 0]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Carrega Arquivos\Data Flow Task\Flat File Source_Arquivo_Clientes.Outputs[Flat File Source Output].ExternalColumns[Column 0]"
+                          length="50"
+                          lineageId="Package\Carrega Arquivos\Data Flow Task\Flat File Source_Arquivo_Clientes.Outputs[Flat File Source Output].Columns[Column 0]"
+                          name="Column 0"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Carrega Arquivos\Data Flow Task\Flat File Source_Arquivo_Clientes.Outputs[Flat File Source Output].Columns[Column 1]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Carrega Arquivos\Data Flow Task\Flat File Source_Arquivo_Clientes.Outputs[Flat File Source Output].ExternalColumns[Column 1]"
+                          length="50"
+                          lineageId="Package\Carrega Arquivos\Data Flow Task\Flat File Source_Arquivo_Clientes.Outputs[Flat File Source Output].Columns[Column 1]"
+                          name="Column 1"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Carrega Arquivos\Data Flow Task\Flat File Source_Arquivo_Clientes.Outputs[Flat File Source Output].Columns[Column 2]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Carrega Arquivos\Data Flow Task\Flat File Source_Arquivo_Clientes.Outputs[Flat File Source Output].ExternalColumns[Column 2]"
+                          length="50"
+                          lineageId="Package\Carrega Arquivos\Data Flow Task\Flat File Source_Arquivo_Clientes.Outputs[Flat File Source Output].Columns[Column 2]"
+                          name="Column 2"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Carrega Arquivos\Data Flow Task\Flat File Source_Arquivo_Clientes.Outputs[Flat File Source Output].Columns[Column 3]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Carrega Arquivos\Data Flow Task\Flat File Source_Arquivo_Clientes.Outputs[Flat File Source Output].ExternalColumns[Column 3]"
+                          length="50"
+                          lineageId="Package\Carrega Arquivos\Data Flow Task\Flat File Source_Arquivo_Clientes.Outputs[Flat File Source Output].Columns[Column 3]"
+                          name="Column 3"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Carrega Arquivos\Data Flow Task\Flat File Source_Arquivo_Clientes.Outputs[Flat File Source Output].Columns[Column 4]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Carrega Arquivos\Data Flow Task\Flat File Source_Arquivo_Clientes.Outputs[Flat File Source Output].ExternalColumns[Column 4]"
+                          length="50"
+                          lineageId="Package\Carrega Arquivos\Data Flow Task\Flat File Source_Arquivo_Clientes.Outputs[Flat File Source Output].Columns[Column 4]"
+                          name="Column 4"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Carrega Arquivos\Data Flow Task\Flat File Source_Arquivo_Clientes.Outputs[Flat File Source Output].ExternalColumns[Column 0]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 0" />
+                        <externalMetadataColumn
+                          refId="Package\Carrega Arquivos\Data Flow Task\Flat File Source_Arquivo_Clientes.Outputs[Flat File Source Output].ExternalColumns[Column 1]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 1" />
+                        <externalMetadataColumn
+                          refId="Package\Carrega Arquivos\Data Flow Task\Flat File Source_Arquivo_Clientes.Outputs[Flat File Source Output].ExternalColumns[Column 2]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 2" />
+                        <externalMetadataColumn
+                          refId="Package\Carrega Arquivos\Data Flow Task\Flat File Source_Arquivo_Clientes.Outputs[Flat File Source Output].ExternalColumns[Column 3]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 3" />
+                        <externalMetadataColumn
+                          refId="Package\Carrega Arquivos\Data Flow Task\Flat File Source_Arquivo_Clientes.Outputs[Flat File Source Output].ExternalColumns[Column 4]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 4" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Carrega Arquivos\Data Flow Task\Flat File Source_Arquivo_Clientes.Outputs[Flat File Source Error Output]"
+                      isErrorOut="true"
+                      name="Flat File Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Carrega Arquivos\Data Flow Task\Flat File Source_Arquivo_Clientes.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          codePage="1252"
+                          dataType="text"
+                          description="Flat File Source Error Output Column"
+                          lineageId="Package\Carrega Arquivos\Data Flow Task\Flat File Source_Arquivo_Clientes.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          name="Flat File Source Error Output Column" />
+                        <outputColumn
+                          refId="Package\Carrega Arquivos\Data Flow Task\Flat File Source_Arquivo_Clientes.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Carrega Arquivos\Data Flow Task\Flat File Source_Arquivo_Clientes.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Carrega Arquivos\Data Flow Task\Flat File Source_Arquivo_Clientes.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Carrega Arquivos\Data Flow Task\Flat File Source_Arquivo_Clientes.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Carrega Arquivos\Data Flow Task\OLE DB Destination_TB_CLIENTES"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="OLE DB Destination_TB_CLIENTES"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[dbo].[CLIENTES]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Carrega Arquivos\Data Flow Task\OLE DB Destination_TB_CLIENTES.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[DESKTOP-A6IR04A.loja.sa]"
+                      connectionManagerRefId="Package.ConnectionManagers[DESKTOP-A6IR04A.loja.sa]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Carrega Arquivos\Data Flow Task\OLE DB Destination_TB_CLIENTES.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Carrega Arquivos\Data Flow Task\OLE DB Destination_TB_CLIENTES.Inputs[OLE DB Destination Input].Columns[Column 0]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Column 0"
+                          externalMetadataColumnId="Package\Carrega Arquivos\Data Flow Task\OLE DB Destination_TB_CLIENTES.Inputs[OLE DB Destination Input].ExternalColumns[NUMERO]"
+                          lineageId="Package\Carrega Arquivos\Data Flow Task\Flat File Source_Arquivo_Clientes.Outputs[Flat File Source Output].Columns[Column 0]" />
+                        <inputColumn
+                          refId="Package\Carrega Arquivos\Data Flow Task\OLE DB Destination_TB_CLIENTES.Inputs[OLE DB Destination Input].Columns[Column 1]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Column 1"
+                          externalMetadataColumnId="Package\Carrega Arquivos\Data Flow Task\OLE DB Destination_TB_CLIENTES.Inputs[OLE DB Destination Input].ExternalColumns[NOME]"
+                          lineageId="Package\Carrega Arquivos\Data Flow Task\Flat File Source_Arquivo_Clientes.Outputs[Flat File Source Output].Columns[Column 1]" />
+                        <inputColumn
+                          refId="Package\Carrega Arquivos\Data Flow Task\OLE DB Destination_TB_CLIENTES.Inputs[OLE DB Destination Input].Columns[Column 2]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Column 2"
+                          externalMetadataColumnId="Package\Carrega Arquivos\Data Flow Task\OLE DB Destination_TB_CLIENTES.Inputs[OLE DB Destination Input].ExternalColumns[SOBRENOME]"
+                          lineageId="Package\Carrega Arquivos\Data Flow Task\Flat File Source_Arquivo_Clientes.Outputs[Flat File Source Output].Columns[Column 2]" />
+                        <inputColumn
+                          refId="Package\Carrega Arquivos\Data Flow Task\OLE DB Destination_TB_CLIENTES.Inputs[OLE DB Destination Input].Columns[Column 3]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Column 3"
+                          externalMetadataColumnId="Package\Carrega Arquivos\Data Flow Task\OLE DB Destination_TB_CLIENTES.Inputs[OLE DB Destination Input].ExternalColumns[ENDERECO]"
+                          lineageId="Package\Carrega Arquivos\Data Flow Task\Flat File Source_Arquivo_Clientes.Outputs[Flat File Source Output].Columns[Column 3]" />
+                        <inputColumn
+                          refId="Package\Carrega Arquivos\Data Flow Task\OLE DB Destination_TB_CLIENTES.Inputs[OLE DB Destination Input].Columns[Column 4]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Column 4"
+                          externalMetadataColumnId="Package\Carrega Arquivos\Data Flow Task\OLE DB Destination_TB_CLIENTES.Inputs[OLE DB Destination Input].ExternalColumns[CEP]"
+                          lineageId="Package\Carrega Arquivos\Data Flow Task\Flat File Source_Arquivo_Clientes.Outputs[Flat File Source Output].Columns[Column 4]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Carrega Arquivos\Data Flow Task\OLE DB Destination_TB_CLIENTES.Inputs[OLE DB Destination Input].ExternalColumns[NUMERO]"
+                          dataType="i4"
+                          name="NUMERO" />
+                        <externalMetadataColumn
+                          refId="Package\Carrega Arquivos\Data Flow Task\OLE DB Destination_TB_CLIENTES.Inputs[OLE DB Destination Input].ExternalColumns[NOME]"
+                          codePage="1252"
+                          dataType="str"
+                          length="150"
+                          name="NOME" />
+                        <externalMetadataColumn
+                          refId="Package\Carrega Arquivos\Data Flow Task\OLE DB Destination_TB_CLIENTES.Inputs[OLE DB Destination Input].ExternalColumns[SOBRENOME]"
+                          codePage="1252"
+                          dataType="str"
+                          length="150"
+                          name="SOBRENOME" />
+                        <externalMetadataColumn
+                          refId="Package\Carrega Arquivos\Data Flow Task\OLE DB Destination_TB_CLIENTES.Inputs[OLE DB Destination Input].ExternalColumns[ENDERECO]"
+                          codePage="1252"
+                          dataType="str"
+                          length="500"
+                          name="ENDERECO" />
+                        <externalMetadataColumn
+                          refId="Package\Carrega Arquivos\Data Flow Task\OLE DB Destination_TB_CLIENTES.Inputs[OLE DB Destination Input].ExternalColumns[CEP]"
+                          codePage="1252"
+                          dataType="str"
+                          length="30"
+                          name="CEP" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Carrega Arquivos\Data Flow Task\OLE DB Destination_TB_CLIENTES.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Carrega Arquivos\Data Flow Task\OLE DB Destination_TB_CLIENTES.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Carrega Arquivos\Data Flow Task\OLE DB Destination_TB_CLIENTES.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Carrega Arquivos\Data Flow Task\OLE DB Destination_TB_CLIENTES.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Carrega Arquivos\Data Flow Task\OLE DB Destination_TB_CLIENTES.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Carrega Arquivos\Data Flow Task\OLE DB Destination_TB_CLIENTES.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Carrega Arquivos\Data Flow Task.Paths[Flat File Source Output]"
+                  endId="Package\Carrega Arquivos\Data Flow Task\OLE DB Destination_TB_CLIENTES.Inputs[OLE DB Destination Input]"
+                  name="Flat File Source Output"
+                  startId="Package\Carrega Arquivos\Data Flow Task\Flat File Source_Arquivo_Clientes.Outputs[Flat File Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:ForEachVariableMappings>
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{5F16B9B6-EEEA-4D00-BF48-36F17D577D98}"
+          DTS:ObjectName="{5F16B9B6-EEEA-4D00-BF48-36F17D577D98}"
+          DTS:ValueIndex="0"
+          DTS:VariableName="User::INDICE" />
+      </DTS:ForEachVariableMappings>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\LIMPA A TABELA CLIENTES"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{EDA08B47-FEF2-4896-9CC9-CDB1EC01AE3C}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="LIMPA A TABELA CLIENTES"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{1099C260-3CB7-40B7-9182-FF672B3A60BE}"
+          SQLTask:SqlStatementSource="truncate table clientes" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{E64CF0E7-80A0-42B8-BBEC-6900ABE0672A}"
+      DTS:From="Package\LIMPA A TABELA CLIENTES"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Carrega Arquivos" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="152,42.6666666666667"
+          Id="Package\Carrega Arquivos\Data Flow Task"
+          TopLeft="42.7857109063439,29.4761863251527" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="237.333333333334,127.333333333334"
+          Size="237.333333333334,170"
+          Id="Package\Carrega Arquivos"
+          TopLeft="184.325394078734,159.783065925925" />
+        <NodeLayout
+          Size="209.333333333334,42.6666666666667"
+          Id="Package\LIMPA A TABELA CLIENTES"
+          TopLeft="203.035711260246,63.2047607745727" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="305.347219336157,105.871427441239">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,53.9116384846856"
+              Start="0,0"
+              End="0,46.4116384846856">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,46.4116384846856" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Carrega Arquivos\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="243.333333333334,42.6666666666667"
+          Id="Package\Carrega Arquivos\Data Flow Task\OLE DB Destination_TB_CLIENTES"
+          TopLeft="201.562496996485,168.999996978045" />
+        <NodeLayout
+          Size="236,42.6666666666667"
+          Id="Package\Carrega Arquivos\Data Flow Task\Flat File Source_Arquivo_Clientes"
+          TopLeft="97.4999985471368,77.9999986052513" />
+        <EdgeLayout
+          Id="Package\Carrega Arquivos\Data Flow Task.Paths[Flat File Source Output]"
+          TopLeft="215.499998547137,120.666665271918">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="107.729165116015,48.3333317061266"
+              Start="0,0"
+              End="107.729165116015,40.8333317061266">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.1666658530633" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.1666658530633"
+                    Point2="0,24.1666658530633"
+                    Point3="4,24.1666658530633" />
+                  <mssgle:LineSegment
+                    End="103.729165116015,24.1666658530633" />
+                  <mssgle:CubicBezierSegment
+                    Point1="103.729165116015,24.1666658530633"
+                    Point2="107.729165116015,24.1666658530633"
+                    Point3="107.729165116015,28.1666658530633" />
+                  <mssgle:LineSegment
+                    End="107.729165116015,40.8333317061266" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Carrega Arquivos\Data Flow Task\OLE DB Destination_TB_CLIENTES">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

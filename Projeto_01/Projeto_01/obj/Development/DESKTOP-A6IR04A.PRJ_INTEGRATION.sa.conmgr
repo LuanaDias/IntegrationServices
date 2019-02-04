@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="DESKTOP-A6IR04A.PRJ_INTEGRATION.sa"
+  DTS:DTSID="{B198DB02-1744-4E32-8A38-D8082E47FDE7}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=DESKTOP-A6IR04A;User ID=sa;Initial Catalog=PRJ_INTEGRATION;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAdSxSU87rPUyZt1moY0illgAAAAACAAAAAAAQZgAAAAEAACAAAACaEkkkQ2Mqygqdt1Urivpd5slcQryG8+XZ6B4NAY8nRAAAAAAOgAAAAAIAACAAAAA6A0PU5271LPlsBLp3UT0kU1fgGj7cHn+EA56XS/w2kHAAAABg/cqEOcAef340danGzkdAzOIrsroLDpn0m1IeAa5sEL7h0I9cqhmj69HR71ZExa78jndvHLKJ1pqZUe7lnjHXHbW7AyDKMygWrKajiTfvvCrP+PDgTjSfsx4wN1UX+FF4P5J795D4b0ac9Oag8JCfQAAAAGyvxBfWNV/h135WEx479FCVG8ZrzosMlOzDZk2yknB7zuqOeppDXvoEHe/H6EfT1Yk4Qlv+nMcvmaGga2GslS8=</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

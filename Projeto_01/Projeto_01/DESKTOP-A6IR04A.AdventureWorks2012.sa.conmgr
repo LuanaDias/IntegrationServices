@@ -1,0 +1,14 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="DESKTOP-A6IR04A.AdventureWorks2012.sa"
+  DTS:DTSID="{A7390CE5-BF9F-4D30-AD0C-E35FBD2BF696}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=DESKTOP-A6IR04A;User ID=sa;Initial Catalog=AdventureWorks2012;Provider=SQLNCLI11.1;Auto Translate=False;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAdSxSU87rPUyZt1moY0illgAAAAACAAAAAAAQZgAAAAEAACAAAADNShryo7+kHUhA0ib/zocBfttmEPMr6XKniJJc+b384wAAAAAOgAAAAAIAACAAAAD+KVyHDxlOtDOvdT0uhaqMVeakFIp/kVwPSZO1B0sVDHAAAAD+vujCiqUMPbiYnT208e6mpJXx/iXlmB/r6r+HImqpp1PIFnb1lflzgKMxx00YoQGK8lNHEpiGAlZqBvmYy8bV55gIARLjmsQMii0t5TAAXvkU3eEDHiDborZIvN/YW4/u5z3vb6XbkKKjGxtroepMQAAAAMPORQ7GSOUEkK3P3xXS7G7CKeSeL6LsoIz4azdMczaWfzjRtOU2vW3r+Es18B0uqhKuPsFh4M0YsK4D2M1PPGY=</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

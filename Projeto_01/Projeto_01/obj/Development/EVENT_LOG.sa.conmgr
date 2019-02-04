@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="EVENT_LOG sa"
+  DTS:DTSID="{59142F8E-6381-455A-B083-E155C11C461E}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=.;User ID=sa;Initial Catalog=EVENT_LOG;Provider=SQLNCLI11.1;Auto Translate=False;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAdSxSU87rPUyZt1moY0illgAAAAACAAAAAAAQZgAAAAEAACAAAABiJXCiNeqqZibdA4NsNkoJAMfVRNdojlYdHY5X7Ug3cgAAAAAOgAAAAAIAACAAAAArfy2OPnzRhsUISWpgk77eL3yHjPdZgEObPXWwlB7+QHAAAAD7WWbn/COzMGkla8Gi//Ez5ZSk01L84EKWvPgkLi9Q7SJrWHJ6vk4nJESR5yYlxbpPF7X7RRpIBTblIo/2RcgijA8YEWnH6p79KoTZVEFdkznE+f9hOS/LlIVznycIUlNTTxTDfk1TH2BLr56Tatl/QAAAAIbl7V2eZ1z3/Ary5QR8azCrSp8ZfN+sGFoYghZ3qNaHPqTtL/w3F8dBZPM5mRxnPMYVMyB7FwaLQLs7Yc71p60=</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
